@@ -160,5 +160,48 @@ footer {
   border-top: 1px solid #222;
 }
 
+/* ================= MOBILE RESPONSIVENESS FIXES ================= */
+@media (max-width: 768px) {
+  /* 1. Reset standard section padding so content doesn't get squeezed from the sides */
+  section {
+    padding: 80px 24px 40px 24px;
+  }
 
+  /* 2. Switch Hero from 2 columns to 1 vertical column & center align everything */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+    min-height: auto; /* Prevents overflow issues on short screens */
+    padding-top: 120px; /* Gives space so the fixed nav doesn't cover text */
+  }
+
+  /* 3. Adjust typography scaling so it doesn't break into awkward lines */
+  h1 {
+    font-size: 2.8rem;
+  }
+  h1 span {
+    font-size: 3.2rem;
+  }
+
+  /* 4. Center buttons and give them spacing on mobile */
+  .btn {
+    margin: 8px 4px;
+    display: inline-block;
+  }
+
+  /* 5. Fix the profile container and stop the image from squishing */
+  .profile {
+    max-width: 360px;
+    margin: 0 auto; /* Centers the profile block horizontally */
+    width: 100%;
+  }
+
+  .profile img {
+    width: 100%;
+    height: auto; /* Keeps the natural aspect ratio */
+    object-fit: cover; /* Forces image to clip cleanly instead of stretching */
+    display: block;
+  }
+}
 
