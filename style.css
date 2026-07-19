@@ -118,7 +118,9 @@ small {
   color: #57d98b;
   font-weight: 700;
 }
+
 .actions a {
+  transition: all ease 0.3s;
   display: inline-block;
   margin: 16px 8px 0 0;
   padding: 10px 14px;
@@ -127,6 +129,12 @@ small {
   color: #fff;
   text-decoration: none;
 }
+
+.actions a:hover{
+  background-color: #57d98b;
+  color: black;
+}
+
 .skills span {
   color: black;
   display: inline-block;
